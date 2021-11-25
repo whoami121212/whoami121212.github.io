@@ -13,5 +13,5 @@ sidebar_main: true
 **내맘대로 기획해보는 페이지입니다. 비밀글임**
 {: .notice--warning}
 
-{% assign posts = site.categories['Story'] %}
+{% assign posts = site.categories.Story %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
