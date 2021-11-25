@@ -1,8 +1,7 @@
 ---
 title: "루키스 파트3 - 유니티엔진"
 layout: archive
-permalink: categories/unity-lesson-1
-author_profile: true
+permalink: categories/rookiss-part-3
 sidebar_main: true
 ---
 
