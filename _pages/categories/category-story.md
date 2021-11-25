@@ -1,7 +1,7 @@
 ---
-title: "루키스 파트3 - 유니티엔진"
+title: "기획"
 layout: archive
-permalink: categories/unity-lesson-1
+permalink: categories/story
 author_profile: true
 sidebar_main: true
 ---
@@ -10,8 +10,8 @@ sidebar_main: true
 
 ***
 
-**인프런의 'rookiss 강의 파트3 - 유니티엔진' 요약**
+**내맘대로 기획해보는 페이지입니다. 비밀글임**
 {: .notice--warning}
 
-{% assign posts = site.categories['Rookiss Part 3'] %}
+{% assign posts = site.categories['Story'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
