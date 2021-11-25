@@ -16,13 +16,13 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
+            <!-- <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Story" %}
-                        <li><a href="/categories/story" class="">스토리 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/story" class="">Story ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>
+            </ul> -->
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Unity Lesson 3" %}
