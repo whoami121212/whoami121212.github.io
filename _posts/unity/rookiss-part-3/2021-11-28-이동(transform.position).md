@@ -15,7 +15,7 @@ last_modified_at: 2021-11-28
 
 ### 로컬좌표 기준 이동
 
-```C#
+```c#
 //update 안에서 실행
 float _speed = 10;
 if (Input.GetKey(KeyCode.W))
@@ -26,7 +26,7 @@ if (Input.GetKey(KeyCode.W))
 - W키를 누르면 앞으로 이동하는 코드.
 - TransformDirection : 로컬 좌표를 월드좌표로 변환해줌. 즉, 위의 코드를 이용 시 현재 go의 로컬 좌표를 중심으로 앞으로 움직인다. 
 
-```C#
+```c#
 transform.Translate(Vector3.forward * Time.deltaTime * _speed)
 ```
 - 위의 코드와 동일하게 작동함. 
