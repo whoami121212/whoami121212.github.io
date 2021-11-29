@@ -11,6 +11,13 @@
         <span class="nav__sub-title">Unity</span>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Rookiss Part 1" %}
+                        <li><a href="/categories/rookiss-part-1" class="">Rookiss Part 1 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Rookiss Part 3" %}
                         <li><a href="/categories/rookiss-part-3" class="">Rookiss Part 3 ({{category[1].size}})</a></li>
                     {% endif %}
