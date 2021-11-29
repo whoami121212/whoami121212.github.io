@@ -32,7 +32,7 @@ transform.Translate(Vector3.forward * Time.deltaTime * _speed)
 - 위의 코드와 동일하게 작동함. 
 
 ### 월드좌표 기준으로 이동
-```C#
+```c#
 transform.positio += Vector3.back * Time.deltaTime * _speed
 ```
 - position에 바로 벡터 방향과 크기를 곱해주면 월드좌표 기준으로 이동한다. 
