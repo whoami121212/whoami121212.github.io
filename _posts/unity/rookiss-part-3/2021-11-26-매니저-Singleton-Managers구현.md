@@ -1,5 +1,5 @@
 ---
-title:  "Singleton-Managers구현"
+title:  "매니저-Singleton-Managers구현"
 
 categories:
   -   "Rookiss Part 3"
@@ -9,8 +9,8 @@ tags:
 toc: true
 toc_sticky: true
 
-date: 2021-11-26
-last_modified_at: 2021-11-26
+date: 2021-11-29
+last_modified_at: 2021-11-29
 ---
 
 ### Managers class 구현

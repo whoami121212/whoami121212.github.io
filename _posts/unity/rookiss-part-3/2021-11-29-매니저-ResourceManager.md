@@ -28,6 +28,8 @@ void Start()
 }
 ```
 > 이렇게 하면 아래와 같이 엔진에서 오브젝트를 붙일 수 있습니다. 
+<br>
+
 ![image](https://user-images.githubusercontent.com/53845159/143876163-c3ca2557-fc57-4842-b4e1-bcb879b6977c.png)
 
 ### 2. 코드로 제어
@@ -45,6 +47,8 @@ void Start()
 }
 ```
 - 기본적으로 Resources.Load<T>()함수는 Assets/Resources 폴더 안에서 불러온다. ()안에는 그 경로 이후의 경로만 입력해주면 됨. 
+<br>
+
 ![image](https://user-images.githubusercontent.com/53845159/143876396-74915e8e-a647-4c1b-b84c-c8ff88849508.png)
 
 >  **하지만...** 결국 리소스 관리를 위한 <u>resource manager</u>가 필요하게 된다...

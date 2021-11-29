@@ -86,6 +86,7 @@ class Knight
 
 #### Property 활용
 - 하지만~ Property를 활용하면 조금 더 쉽게 구현할 수 있다. 
+
 ```c#
 class Knight
 {
