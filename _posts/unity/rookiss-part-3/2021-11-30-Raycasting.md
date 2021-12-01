@@ -121,6 +121,6 @@ if (Input.GetMouseButtonDown(0))
 }
 ```
 
-- 테스트 모습
+- 테스트
 
 ![image](https://user-images.githubusercontent.com/53845159/144255705-31774ad2-9ca2-45bc-994b-b98274dc637e.png)
