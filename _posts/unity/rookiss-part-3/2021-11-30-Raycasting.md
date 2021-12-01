@@ -80,6 +80,7 @@ Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition));
 ### screen -> world 좌표로
 : 현재 마우스 위치의 월드좌표
 - 참고: camera => clipping planes 카메라로 찍히는 범위를 정함
+
 ![image](https://user-images.githubusercontent.com/53845159/144255550-a6d1b543-50bf-4822-8cf0-266405151c0c.png)
 
 ```c#
@@ -109,7 +110,6 @@ if (Input.GetMouseButtonDown(0))
 {
     // 이 Ray 객체를 이용해서 Physics.Raycast를 다 이용할 수 있다. 
     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
 
     Debug.DrawRay(Camera.main.transform.position, ray.direction * 100.0f, Color.red, 1.0f);
 
