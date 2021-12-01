@@ -12,8 +12,8 @@ toc_sticky: true
 date: 2021-11-30
 last_modified_at: 2021-12-01
 ---
-
-내가 보고 있는 화면에서 3D 영역을 클릭하는 방법 : 카메라에서 클릭한 방향으로 레이저를 쏘아서 맞는 곳을 return
+> 오늘의 목표 : 
+내가 보고 있는 화면에서 3D 영역을 클릭하는 방법 = 카메라에서 클릭한 방향으로 레이저를 쏘아서 맞는 곳을 return
 
 ## Raycasting 레이캐스팅 기초 
 -  현재 position에서 ray를 쏘아서 마주치는 오브젝트의 정보를 불러오는 코드
@@ -62,6 +62,9 @@ void Update()
 ```c#
 Debug.Log(Input.mousePosition);
 ```
+
+![image](https://user-images.githubusercontent.com/53845159/144255301-1924a6be-413b-4b1b-a0d7-32e5a4c2197e.png)
+
 <br>
 
 ### screen -> viewport 좌표
@@ -69,11 +72,16 @@ Debug.Log(Input.mousePosition);
 ```c#
 Debug.Log(Camera.main.ScreenToViewportPoint(Input.mousePosition));
 ```
+![image](https://user-images.githubusercontent.com/53845159/144255478-87d31b20-99b5-40ea-9764-beaf95c0cddd.png)
+
+
 <br>
 
 ### screen -> world 좌표로
 : 현재 마우스 위치의 월드좌표
 - 참고: camera => clipping planes 카메라로 찍히는 범위를 정함
+![image](https://user-images.githubusercontent.com/53845159/144255550-a6d1b543-50bf-4822-8cf0-266405151c0c.png)
+
 ```c#
 // 마우스 버튼을 누르면? 
 if (Input.GetMouseButtonDown(0))
@@ -112,3 +120,7 @@ if (Input.GetMouseButtonDown(0))
     }
 }
 ```
+
+- 테스트 모습
+
+![image](https://user-images.githubusercontent.com/53845159/144255705-31774ad2-9ca2-45bc-994b-b98274dc637e.png)
