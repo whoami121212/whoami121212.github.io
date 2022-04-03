@@ -12,5 +12,5 @@ sidebar_main: true
 **인프런의 'SQL Fundamentals 요약**
 {: .notice--warning}
 
-{% assign posts = site.categories['Rookiss Part 1'] %}
+{% assign posts = site.categories['SQL Fundamentals'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
