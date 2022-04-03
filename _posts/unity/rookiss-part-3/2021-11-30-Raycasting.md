@@ -10,10 +10,12 @@ toc: true
 toc_sticky: true
 
 date: 2021-11-30
-last_modified_at: 2021-12-01
+last_modified_at: 2021-12-06
 ---
 > 오늘의 목표 : 
 내가 보고 있는 화면에서 3D 영역을 클릭하는 방법 = 카메라에서 클릭한 방향으로 레이저를 쏘아서 맞는 곳을 return
+
+# Raycasting - 1
 
 ## Raycasting 레이캐스팅 기초 
 -  현재 position에서 ray를 쏘아서 마주치는 오브젝트의 정보를 불러오는 코드
@@ -124,3 +126,39 @@ if (Input.GetMouseButtonDown(0))
 - 테스트
 
 ![image](https://user-images.githubusercontent.com/53845159/144255705-31774ad2-9ca2-45bc-994b-b98274dc637e.png)
+
+
+
+# Raycasting - 2
+
+## Layer Mask
+
+### Layer Mask 활용
+
+Raycast의 버전 중 아래 버전을 이용하면 layerMask를 지정할 수 있다. 
+```c#
+bool Physics.Raycast(Ray ray, out RaycastHit hitinfo, float maxDistance, int layerMask )
+```
+ - layerMask는 총 32개로, int32를 이용하고 있다고 할 수 있다. 
+ - 아래 유니티에서 설정해준대로 해당 비트를 체크한다고 보면 된다. 
+
+ ![image](https://user-images.githubusercontent.com/53845159/144754033-b746f407-f1e6-4bfc-a4ec-a2a270d6660c.png)
+
+
+#### LayerMask 실습 
+
+1. 만약에 8번째 비트를 켜고싶다면 :
+```c#
+int mask = (1 << 8);
+```
+
+2. 8번과 9번 : 몬스터와 벽을 모두 체크하고싶다면 or연산을 활용 : 
+```c#
+int mask = (1 << 8) | (1 << 9);
+```
+
+3. 만약에 위 방법이 너무 어렵다면? 가독성있게 만들수도 있다.
+- 성능상 차이는 크지 않다고 한다... 
+```c#
+LayerMask mask = LayerMask.GetMask("Monster") | LayerMask.GetMask("Wall");
+```

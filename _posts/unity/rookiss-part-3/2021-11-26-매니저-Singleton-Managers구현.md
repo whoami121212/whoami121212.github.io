@@ -9,8 +9,8 @@ tags:
 toc: true
 toc_sticky: true
 
-date: 2021-11-29
-last_modified_at: 2021-11-29
+date: 2021-11-26
+last_modified_at: 2021-11-26
 ---
 
 ### Managers class 구현

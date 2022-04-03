@@ -1,8 +1,7 @@
 ---
-title: "기획"
+title: "SQL Fundamentals"
 layout: archive
-permalink: categories/story
-author_profile: true
+permalink: categories/sql-fundamentals
 sidebar_main: true
 ---
 
@@ -10,8 +9,8 @@ sidebar_main: true
 
 ***
 
-**내맘대로 기획해보는 페이지입니다. 비밀글임**
+**인프런의 'SQL Fundamentals 요약**
 {: .notice--warning}
 
-{% assign posts = site.categories.story %}
+{% assign posts = site.categories['Rookiss Part 1'] %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
