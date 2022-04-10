@@ -16,6 +16,12 @@ last_modified_at: 2022-04-06
 ### 결론 
 1. 원래 파이썬으로 'for(timestamp -> string 변환 -> 앞글자만 추출)'로 무식하게 date를 꺼냈는데, 그냥 to_char(created_at)::date로 처리할 수 있었던 것...
 2. date_trunc로 연 첫날, 월 첫날, 마지막날, 신청월 등 다양한 처리를 할 수 있었다. 
+3. 바로빌 세금계산서 대량 업로드 시, 'mm-dd' 형식으로 적는 부분이 있는데 이또한 formatting으로 해결할 수 있을 것 같다.<br>
+> 인프런의 예 : 만약에 월별 생성된 바우처의 수를 알고 싶을 때에는 포멧팅을 통해서 아래와 같이 만들 수 있는 것 
+```sql
+select to_char(date_trunc('month', v.created_at), 'mm')
+from vouchers v
+```
 
 ### date/timestamp/time/interval
 
@@ -86,3 +92,4 @@ select trunc(99.9999, 2)
 - select date_trunc('day', to_date('2022-03-03', 'yyyy-mm-dd')) = **date 타입을 잘랐지만, 무조건 자르고나면 timestamp타입으로 나온다. 이를 방지하기 위해서는 명시적 타입변환이 필요함**
 > date_trunc('month', orders.created_at::date) = 이렇게 하면 달의 첫날을 구할 수 있다.<br>
 year(1월1일), week(월요일) 등을 구할 수 있다. 일요일을 구하고 싶다면 -1
+
