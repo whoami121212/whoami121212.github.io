@@ -78,10 +78,3 @@ from a
 ![image](https://user-images.githubusercontent.com/53845159/162615951-debc2f37-5a21-498c-a484-9f26f7d76333.png)
 
 
-
-
-#### 2. 정규화 순위 : 
-
-#### 3. 분위 : 
-
-
