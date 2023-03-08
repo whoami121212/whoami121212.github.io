@@ -18,7 +18,7 @@ last_modified_at: 2021-11-29
 - use gravity
 - is kinematic
 - constraints
-- 카메라 현재 위치로 돌리기 : ctrl shift f
+
 <br><br>
 
 #### collision & trigger test code : 

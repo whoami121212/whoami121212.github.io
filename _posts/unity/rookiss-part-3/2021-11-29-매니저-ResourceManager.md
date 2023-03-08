@@ -12,6 +12,9 @@ toc_sticky: true
 date: 2021-11-29
 last_modified_at: 2021-11-29
 ---
+## listener pattern
+매니저 클래스 안에서 이벤트를 체크해서, Action으로 전파하는 방법 
+
 
 ### 1. 다른 GameObject를 불러오는 가장 쉬운 방법 - 코드로 명시하고 엔진에서 때려박기
 ```c#

@@ -25,6 +25,7 @@ if (Input.GetKey(KeyCode.W))
 ```
 - W키를 누르면 앞으로 이동하는 코드.
 - TransformDirection : 로컬 좌표를 월드좌표로 변환해줌. 즉, 위의 코드를 이용 시 현재 go의 로컬 좌표를 중심으로 앞으로 움직인다. 
+- InverseTransformDirection : 월드좌표를 로컬좌표로 변환해줌. 
 
 ```c#
 transform.Translate(Vector3.forward * Time.deltaTime * _speed)
@@ -33,8 +34,14 @@ transform.Translate(Vector3.forward * Time.deltaTime * _speed)
 
 ### 월드좌표 기준으로 이동
 ```c#
-transform.positio += Vector3.back * Time.deltaTime * _speed
+transform.position += Vector3.back * Time.deltaTime * _speed
 ```
 - position에 바로 벡터 방향과 크기를 곱해주면 월드좌표 기준으로 이동한다. 
 
 참고) 회전과 합쳐서 이동을 완성한다. 
+
+### Vector란? 
+1. 위치 벡터
+2. 방향 벡터
+
+from * normalized * magnitude

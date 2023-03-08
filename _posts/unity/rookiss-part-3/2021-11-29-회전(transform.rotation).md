@@ -36,6 +36,6 @@ transform.rotation = Quaternion.Euler(new Vector3(0f, r_speed * Time.deltaTime, 
 - Quaternion에 많은 함수들이 있다. rotation을 수정하고자 할 때 이용하면 좋음.
 
 ```c#
-transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRatation(Vector3.forward), _rotationSpeed);
+transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.forward), _rotationSpeed);
 ```
 - Slerp를 이용해서 (시작점, 목표점, 속도)를 매개변수로 천천히 방향전환을 하는 기능을 구현할 수 있다. 
