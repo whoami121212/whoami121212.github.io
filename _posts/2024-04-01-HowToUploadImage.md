@@ -3,6 +3,7 @@ layout: single
 title:  "Typora 이미지 업로드 방법"
 categories: GameDev
 typora-root-url: ../
+toc: true
 ---
 
 # 결론적으로 가장 쉽게 업로드 하는 방법
