@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Typora 이미지 업로드 방법"
-categories: GameDev
+categories: Github Blog
 typora-root-url: ../
 toc: true
 ---

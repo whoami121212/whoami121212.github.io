@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "댓글기능 & 구글 애널리틱스"
-categories: GameDev
+categories: Github Blog
 typora-root-url: ../
 toc: true
 ---
