@@ -4,7 +4,9 @@ title:  "카테고리와 태그 추가"
 categories: Github Blog
 typora-root-url: ../
 toc: true
-
+author_profile: false
+sidebar:
+    nav: "docs"
 ---
 
 # Category & Tag 기능 추가
