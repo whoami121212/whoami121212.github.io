@@ -37,9 +37,10 @@ sidebar:
 
 ### 해결과정 
 1. Blueprint >> Data Structure 생성 
-  데이터 구조체 생성 후 데이터가 가지고 있는 속성들 정의 : Direction * State를 정의해놓는다. 
-  <img src="/../images/2024-04-06-inheritance&Data/image-20240408095422018.png" alt="image-20240408095422018" style="zoom:67%;" />
+     데이터 구조체 생성 후 데이터가 가지고 있는 속성들 정의 : Direction * State를 정의해놓는다. 
+       <img src="/../images/2024-04-06-inheritance&Data/image-20240408095422018.png" alt="image-20240408095422018" style="zoom:67%;" />
 2. Miscellaneous >> Data Table 생성
-  구조체를 활용한 테이블을 구성한다. Knight와 Skeleton을 각각 하나의 row로 구성하면 자동으로 속성값이 따라온다.
-  <img src="/../image-20240408095643988.png" alt="image-20240408095643988" style="zoom:67%;" />
+     구조체를 활용한 테이블을 구성한다. Knight와 Skeleton을 각각 하나의 row로 구성하면 자동으로 속성값이 따라온다.
+       <img src="/../image-20240408095643988.png" alt="image-20240408095643988" style="zoom:67%;" />
 3. 각 자식 클래스에서 해당하는 데이터를 Get 할 수 있도록 설정한다. 
+4. 이후 BP_Creature.UpdateAnimation 함수에서 얻어온 데이터를 쪼개서 배치시켜주면 된다. 
