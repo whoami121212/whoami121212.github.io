@@ -36,6 +36,30 @@ sidebar:
 ### 1. Collision 세팅 
 Components에서 Add button을 눌러서 Box Collider를 추가한다. Sprite 밑에 붙여놔야 회전도 같이 된다. ![image-20240410084514083](/../images/2024-04-09-Collision/image-20240410084514083.png)
 
-apply damage라는 함수도 있음 
+### 2. Data 추가 
 
-clamp : min max 사이에서만 값이 지정된다. 
+Data에 컬럼을 추가하고, DataTable에서 초기값을 지정해준다.  (이때 설정하는 Hp는 MaxHp와 같은 의미이다.)
+
+![image-20240410084834372](/../images/2024-04-09-Collision/image-20240410084834372.png)
+
+설정한 Hp를 초기화하기 위해서 Event BeginPlay에서 Data 변수의 Hp값을 BP 내의 Hp값으로 Set 해준다. 
+<img src="/../images/2024-04-09-Collision/image-20240410085736520.png" alt="image-20240410085736520" style="zoom:50%;" />
+
+### 3. ProcessAttack()
+
+- 공격 로직은 Update Animation 뒤에 실행되도록 이벤트 그래프를 변경하고, 내부 로직을 구현한다. 
+- Get Overlapping Actors를 이용하면 Collision안에 들어온 특정 Class 객체를 식별할 수 있다. 
+  이용할 Collision은 select 문을 통해서 Direction에 맞게 지정해준다.
+   <img src="/../images/2024-04-09-Collision/image-20240410085143532.png" alt="image-20240410085143532" style="zoom:50%;" />
+- Foreach를 통해서 OnDamaged가 실행되도록 한다. 
+
+### 4. OnDamaged(obj target, int Damage, obj Attacker)
+
+- 피격대상, 피격수치, 공격대상을 인자로 받는 함수. (공격대상은 당연히 self이다.)
+
+- 공격자가 내가 아닐 때, Hp - Damage = set Hp로 실행되도록 한다. 
+
+- Clamp를 이용해서 Hp의 최소값(0)과 최대값(MaxHp)로 설정한다. 
+
+  <img src="/../images/2024-04-09-Collision/image-20240410085805332.png" alt="image-20240410085805332" style="zoom:67%;" />
+
