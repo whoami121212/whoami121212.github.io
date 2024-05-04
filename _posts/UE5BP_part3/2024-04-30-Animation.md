@@ -44,3 +44,31 @@ PlayerController에서 마우스 왼쪽 클릭을 하면 발사하도록 만들�
 ABP_Player에서 몽타주를 세팅해주어야 함. 
 
 Child Montage도 만들 수 있음. 
+
+## 블렌드 스페이스 Blend Space
+
+시작 전 세팅 : Use Controller Rotation Yaw를 true, orient rotation to movement을 false로 해주어서 캐릭터가 항상 카메라의 정면을 바라보게 한다. 
+
+- 여기부터 앞으로 가는 애니메이션과 섞어서 게걸음과 뒷걸음을 구현할 것. 
+  이를 위해서는 조준하고 있는 방향과 움직이고 있는 방향의 차이의 rotation값을 이용해서 애니메이션을 섞어주어야 한다. 
+
+- 이미 Pawn에 Get Base Pawn Aim Rotation이라는 함수를 통해서 현재 조준하는 rotation값을 가져올 수 있음. 
+  <img src="/../images/2024-04-30-Animation/image-20240501174203171.png" alt="image-20240501174203171" style="zoom:80%;" />
+  - Get Velocity를 이용해 현재 이동 중인 값을 구한다. 이를 Rotator, 즉 x값 normailize된 값으로 변환하여 준비. 
+  - Get Base Aim Rotation 함수를 이용해서 현재 조준하고 있는(카메라가 바라보고있는) 방향의 Rotator 값을 구한다. 
+  - 이 두 값을 뽑아서 Yaw만 return하면 두 rotator의 차이, 즉 -180~180도 까지 범위내의 값이 구해진다. 
+- 최종 구해진 MovementOffsetYaw 값에 따라서 180이면 뒤로 걷고, 0이면 앞으로, 90도나 -90도면 옆으로 걷도록 만들면 된다. 
+
+### Blend Space 세팅
+
+- 블렌드 스페이스를 생성하고 이름을 BS_Move로 지어준다. 
+- Asset Browser에서 에셋을 갖다놓으면 각각 변수의 위치에 따라서 적절히 애니메이션이 섞이도록 설정할 수 있다. 
+- Horizontal Axis의 값을 MovementOffsetYaw로 정해두고 -180부터 180의 값을 가지게 한다. 
+- 그래프에 적절한 애니메이션을 배치하고 섞어주면 끝! 
+  <img src="/../images/2024-04-30-Animation/image-20240501174816965.png" alt="image-20240501174816965" style="zoom:50%;" />
+
+
+
+## 루트 본 회전
+선 상태로 Yaw를 돌렸을 때 상반신과 하반신이 즉시 같이 움직이는 것이 아니라, 상반신만 둘러보는 식으로 움직이다가 90도 이상 돌아갔을 때 다리가 같이 움직이도록 하기 위함. 
+
